@@ -15,10 +15,13 @@
 
 // question 3
 
-// var days = ["Sun" ,"Mon","Tue","wed","Thur","fri", "Sat" , ];
-// var date = new Date();
-// var currentDay = days[date.getDay()]
-// document.write("today is " + currentDay)
+// var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// var now = new Date();
+// var dayName = days[now.getDay()]; 
+// var shortDay = dayName.slice(0, 3); 
+
+// alert("Today is " + shortDay);
 
 // question 4
 
@@ -96,5 +99,65 @@
 
 // question 11
 
+// var now = new Date();
+// document.write("Current date: " + now + "<br>");
+
+// now.setHours(now.getHours() + 1);
+// document.write("1 hour ahead, it is: " + now);
+
+
+// question 12
+// var now = new Date()
+// document.write("curret date is : " + now + "<br>")
+
+// now.setFullYear(now.getFullYear()-100);
+// document.write("100 years back the date was" + now)
+
+// question 13
+
+// var userAge = prompt("Enter your age:");
+// var currentYear = new Date().getFullYear();
+
+// var birthYear = currentYear - userAge;
+
+// document.write("Your age is " + userAge + "<br>");
+// document.write("Your birth year is " + birthYear);
+
+// question 14
+
+var months = ["January", "February", "March", "April", "May", "June", 
+              "July", "August", "September", "October", "November", "December"];
+
+var now = new Date();
+var currentMonth = months[now.getMonth()];
+
+// alert("Current month: " + currentMonth);
+
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+var now = new Date();
+var dayName = days[now.getDay()]; 
+var shortDay = dayName.slice(0, 3); 
+
+// alert("Today is " + shortDay);
+
+var customerName = "ABC Customer";
+var currentMonth = "February";
+var numberOfUnits = 410;
+var chargesPerUnit = 16;
+var latePaymentSurcharge = 350;
+
+var netAmountPayable = numberOfUnits * chargesPerUnit;
+var grossAmountPayable = netAmountPayable + latePaymentSurcharge;
+
+document.write("<h1>K-Electric Bill</h1>");
+document.write("Customer Name: " + customerName + "<br>");
+document.write("Month: " + currentMonth + "<br>");
+document.write("Number of units: " + numberOfUnits + "<br>");
+document.write("Charges per unit: " + chargesPerUnit + "<br><br>");
+
+document.write("Net Amount Payable (within Due Date): " + netAmountPayable.toFixed(2) + "<br>");
+document.write("Late payment surcharge: " + latePaymentSurcharge.toFixed(2) + "<br>");
+document.write("Gross Amount Payable (after Due Date): " + grossAmountPayable.toFixed(2));
 
 
